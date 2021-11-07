@@ -12,13 +12,30 @@ import ViewInspector
 extension ContentView: Inspectable {}
 
 class SwiftUITestingTests: XCTestCase {
-
-    func test_ContentView() throws {
-        let sut = ContentView()
+    
+    func test_body_containsDarkModeToggle() throws {
+        let sut = makeSUT()
+        let toggle = try findToggle(in: sut)
         
-        let textView = try sut.inspect().find(viewWithId: "hello").text()
-        let content = try textView.string()
-        XCTAssertEqual(content, "Hello, world!")
+        XCTAssertEqual(try toggle.labelView().text().string(), "Dark Mode?")
     }
-
+    
+    func test_toggle_whenTapped_switchesToTrue() throws {
+        let sut = makeSUT()
+        let toggle = try findToggle(in: sut)
+        
+        XCTAssertFalse(try toggle.isOn())
+        try toggle.tap()
+        XCTAssertTrue(try toggle.isOn())
+    }
+    
+    // MARK: - Helpers
+    
+    private func makeSUT() -> ContentView {
+        ContentView(viewModel: .init())
+    }
+    
+    private func findToggle(in sut: ContentView) throws -> InspectableView<ViewType.Toggle> {
+        try sut.inspect().find(viewWithId: ContentView.Identifiers.darkModeSwitch).toggle()
+    }
 }

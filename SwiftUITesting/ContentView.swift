@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .id("hello")
+        Toggle("Dark Mode?", isOn: $viewModel.darkModeEnabled)
+            .id(ContentView.Identifiers.darkModeSwitch)
             .padding()
+    }
+}
+
+extension ContentView {
+    enum Identifiers {
+        static let darkModeSwitch = "darkModeSwitch"
+    }
+}
+
+extension ContentView {
+    class ViewModel: ObservableObject {
+        @Published var darkModeEnabled = false
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: .init())
     }
 }
