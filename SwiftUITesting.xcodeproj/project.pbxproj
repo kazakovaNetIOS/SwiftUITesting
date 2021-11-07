@@ -12,19 +12,11 @@
 		8AE39EC82738141A00662047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE39EC72738141A00662047 /* Assets.xcassets */; };
 		8AE39ECB2738141A00662047 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE39ECA2738141A00662047 /* Preview Assets.xcassets */; };
 		8AE39ED52738141A00662047 /* SwiftUITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE39ED42738141A00662047 /* SwiftUITestingTests.swift */; };
-		8AE39EDF2738141A00662047 /* SwiftUITestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE39EDE2738141A00662047 /* SwiftUITestingUITests.swift */; };
-		8AE39EE12738141A00662047 /* SwiftUITestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE39EE02738141A00662047 /* SwiftUITestingUITestsLaunchTests.swift */; };
+		8AE39EF527387ED100662047 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 8AE39EF427387ED100662047 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8AE39ED12738141A00662047 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AE39EB82738141800662047 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AE39EBF2738141800662047;
-			remoteInfo = SwiftUITesting;
-		};
-		8AE39EDB2738141A00662047 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AE39EB82738141800662047 /* Project object */;
 			proxyType = 1;
@@ -41,9 +33,6 @@
 		8AE39ECA2738141A00662047 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AE39ED02738141A00662047 /* SwiftUITestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE39ED42738141A00662047 /* SwiftUITestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestingTests.swift; sourceTree = "<group>"; };
-		8AE39EDA2738141A00662047 /* SwiftUITestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AE39EDE2738141A00662047 /* SwiftUITestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestingUITests.swift; sourceTree = "<group>"; };
-		8AE39EE02738141A00662047 /* SwiftUITestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AE39ED72738141A00662047 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8AE39EF527387ED100662047 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +59,8 @@
 			children = (
 				8AE39EC22738141800662047 /* SwiftUITesting */,
 				8AE39ED32738141A00662047 /* SwiftUITestingTests */,
-				8AE39EDD2738141A00662047 /* SwiftUITestingUITests */,
 				8AE39EC12738141800662047 /* Products */,
+				8AE39EF327387ED100662047 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +69,6 @@
 			children = (
 				8AE39EC02738141800662047 /* SwiftUITesting.app */,
 				8AE39ED02738141A00662047 /* SwiftUITestingTests.xctest */,
-				8AE39EDA2738141A00662047 /* SwiftUITestingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,13 +100,11 @@
 			path = SwiftUITestingTests;
 			sourceTree = "<group>";
 		};
-		8AE39EDD2738141A00662047 /* SwiftUITestingUITests */ = {
+		8AE39EF327387ED100662047 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8AE39EDE2738141A00662047 /* SwiftUITestingUITests.swift */,
-				8AE39EE02738141A00662047 /* SwiftUITestingUITestsLaunchTests.swift */,
 			);
-			path = SwiftUITestingUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +123,8 @@
 			dependencies = (
 			);
 			name = SwiftUITesting;
+			packageProductDependencies = (
+			);
 			productName = SwiftUITesting;
 			productReference = 8AE39EC02738141800662047 /* SwiftUITesting.app */;
 			productType = "com.apple.product-type.application";
@@ -161,27 +143,12 @@
 				8AE39ED22738141A00662047 /* PBXTargetDependency */,
 			);
 			name = SwiftUITestingTests;
+			packageProductDependencies = (
+				8AE39EF427387ED100662047 /* ViewInspector */,
+			);
 			productName = SwiftUITestingTests;
 			productReference = 8AE39ED02738141A00662047 /* SwiftUITestingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8AE39ED92738141A00662047 /* SwiftUITestingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AE39EEA2738141A00662047 /* Build configuration list for PBXNativeTarget "SwiftUITestingUITests" */;
-			buildPhases = (
-				8AE39ED62738141A00662047 /* Sources */,
-				8AE39ED72738141A00662047 /* Frameworks */,
-				8AE39ED82738141A00662047 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8AE39EDC2738141A00662047 /* PBXTargetDependency */,
-			);
-			name = SwiftUITestingUITests;
-			productName = SwiftUITestingUITests;
-			productReference = 8AE39EDA2738141A00662047 /* SwiftUITestingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,10 +167,6 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 8AE39EBF2738141800662047;
 					};
-					8AE39ED92738141A00662047 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 8AE39EBF2738141800662047;
-					};
 				};
 			};
 			buildConfigurationList = 8AE39EBB2738141800662047 /* Build configuration list for PBXProject "SwiftUITesting" */;
@@ -215,13 +178,15 @@
 				Base,
 			);
 			mainGroup = 8AE39EB72738141800662047;
+			packageReferences = (
+				8AE39EF027387E9300662047 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 8AE39EC12738141800662047 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8AE39EBF2738141800662047 /* SwiftUITesting */,
 				8AE39ECF2738141A00662047 /* SwiftUITestingTests */,
-				8AE39ED92738141A00662047 /* SwiftUITestingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8AE39ECE2738141A00662047 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AE39ED82738141A00662047 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,15 +228,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AE39ED62738141A00662047 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AE39EDF2738141A00662047 /* SwiftUITestingUITests.swift in Sources */,
-				8AE39EE12738141A00662047 /* SwiftUITestingUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +235,6 @@
 			isa = PBXTargetDependency;
 			target = 8AE39EBF2738141800662047 /* SwiftUITesting */;
 			targetProxy = 8AE39ED12738141A00662047 /* PBXContainerItemProxy */;
-		};
-		8AE39EDC2738141A00662047 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AE39EBF2738141800662047 /* SwiftUITesting */;
-			targetProxy = 8AE39EDB2738141A00662047 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,52 +465,6 @@
 			};
 			name = Release;
 		};
-		8AE39EEB2738141A00662047 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK5TU5YA87;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.kazakovanet.SwiftUITestingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftUITesting;
-			};
-			name = Debug;
-		};
-		8AE39EEC2738141A00662047 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK5TU5YA87;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.kazakovanet.SwiftUITestingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftUITesting;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,16 +495,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AE39EEA2738141A00662047 /* Build configuration list for PBXNativeTarget "SwiftUITestingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AE39EEB2738141A00662047 /* Debug */,
-				8AE39EEC2738141A00662047 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AE39EF027387E9300662047 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AE39EF427387ED100662047 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AE39EF027387E9300662047 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AE39EB82738141800662047 /* Project object */;
 }
